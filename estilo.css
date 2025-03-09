@@ -1,0 +1,424 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fuente por defecto */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los enlaces */
+}
+
+/* Fondo oscuro y tipografía moderna */
+body {
+    background-color: #323232; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #181717; /* Color de fondo del header */
+    color: white; /* Color del texto en el header */
+    padding: 10px 0; /* Espaciado vertical */
+    position: fixed; /* El header se mantiene fijo en la parte superior al hacer scroll */
+    top: 0; /* Posición superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000;  /*Capa superior */
+}
+
+.navbar {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear elementos verticalmente */
+    max-width: 1200px; /* Ancho máximo del navbar */
+    margin: 0 auto; /* Centrar el navbar */
+    padding: 0 20px; /* Espaciado horizontal */
+}
+
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    background: linear-gradient(90deg, #f6f2f2, #4d4d4d); /* Degradado de color */
+    -webkit-background-clip: text; /* Clip del fondo al texto para WebKit */
+    -webkit-text-fill-color: transparent; /* Relleno de texto transparente para WebKit */
+    background-clip: text; /* Clip del fondo al texto */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    display: flex; /* Flexbox para alinear elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+nav ul li {
+    display: inline; /* Mostrar elementos en línea */
+    color: chocolate; /* Color del texto */
+}
+
+nav ul li a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Color del texto al pasar el cursor */
+}
+
+.icono img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Altura de la imagen */
+    transition: transform 0.3s; /* Transición suave para la transformación */
+    text-align: center;
+}
+
+.icono img:hover {
+    transform: scale(1.1); /* Escalar la imagen al pasar el cursor */
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Alinear elementos horizontalmente */
+    text-align: center; /* Alinear texto al centro */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 80px; /* Añadir margen superior para evitar que el contenido se superponga con el header fijo */
+}
+
+h2 {
+    text-align: center; /* Alinear texto al centro */
+    color: #f5bbbb; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    font-size: 1rem; /* Tamaño de fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    margin: 20px auto; /* Espaciado vertical y centrado horizontal */
+    padding: 5px; /* Espaciado interno */
+    border-bottom: 2px solid #ff4d4d; /* Línea inferior */
+}
+
+/* Estilo del recuadro que envuelve el texto */
+#descripcion {
+    background-color: #181717; /* Mismo fondo que el header */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+    max-width: 800px; /* Ancho máximo */
+    text-align: left; /* Alinear texto a la izquierda */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #cccccc; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+    box-shadow: 0 4px 8px rgba(255, 77, 77, 0.2); /* Sombra */
+    margin: 20px; /* Espaciado externo */
+}
+
+/* Menú de navegación */
+ul {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: center; /* Centrar elementos */
+    list-style: none; /* Eliminar viñetas de la lista */
+    margin-top: 20px; /* Espaciado superior */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.menu-navegacion li a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: #ffffff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ff4d4d; /* Color de fondo */
+    transition: 0.3s; /* Transición suave */
+    font-weight: bold; /* Texto en negrita */
+}
+
+ul li a:hover {
+    background-color: #e60000; /* Color de fondo al pasar el cursor */
+    transform: scale(1.1); /* Escalar al pasar el cursor */
+}
+
+/* Galería de imágenes con Grid */
+.galeria {
+    display: grid; /* Grid para alinear elementos */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-top: 30px; /* Espaciado superior */
+    width: 80%; /* Ancho del 80% */
+    max-width: 800px; /* Ancho máximo */
+}
+
+.galeria img {
+    width: 100%; /* Ancho completo */
+    height: 250px; /* Altura fija */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+/* Botón minimalista */
+input[type="button"] {
+    background: none; /* Sin fondo */
+    color: #ff4d4d; /* Color del texto */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor de puntero */
+    margin-top: 10px; /* Espaciado superior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    transition: 0.3s; /* Transición suave */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Alinear texto al centro */
+}
+
+input[type="button"]:hover {
+    color: #ffffff; /* Color del texto al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Descripción en imágenes */
+.imagen-con-descripcion {
+    position: relative; /* Posición relativa para el contenedor */
+}
+
+.imagen-con-descripcion img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.imagen-con-descripcion:hover img {
+    transform: scale(1.05); /* Escalar al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.5); /* Sombra al pasar el cursor */
+}
+
+.descripcion-imagen {
+    position: absolute; /* Posición absoluta para la descripción */
+    bottom: 10px; /* Posición inferior */
+    left: 10px; /* Posición izquierda */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: #ffffff; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    opacity: 0; /* Opacidad inicial */
+    visibility: hidden; /* Visibilidad inicial */
+    transition: opacity 0.3s ease-in-out; /* Transición suave */
+}
+
+.imagen-con-descripcion:hover .descripcion-imagen {
+    opacity: 1; /* Opacidad al pasar el cursor */
+    visibility: visible; /* Visibilidad al pasar el cursor */
+}
+
+#leerMas {
+    display: block; /* Mostrar botón "Leer más" */
+}
+
+#leerMenos {
+    display: none; /* Ocultar botón "Leer menos" */
+}
+
+/* Estilos para la lista de canciones */
+#lista-canciones {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-canciones li {
+    background-color: #181717;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#lista-canciones li:hover {
+    background-color: #ff4d4d;
+}
+
+#buscador {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Estilos para la lista de álbumes */
+#lista-albumes {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-albumes li {
+    background-color: #181717;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#lista-albumes li:hover {
+    background-color: #ff4d4d;
+}
+
+#buscador-albumes {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Estilos para el botón de volver */
+.btn-volver {
+    background-color: #ff4d4d; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+    margin-left: auto; /* Alinear a la derecha */
+}
+
+.btn-volver:hover {
+    background-color: #e60000; /* Color de fondo al pasar el cursor */
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Dirección de los elementos en columna */
+    }
+
+    .logo {
+        font-size: 3rem; /* Tamaño de fuente más pequeño */
+    }
+
+    nav ul {
+        flex-direction: column; /* Dirección de los elementos en columna */
+        gap: 10px; /* Menor espaciado entre los elementos */
+    }
+
+    .icono img {
+        width: 50px; /* Ancho de la imagen más pequeño */
+        height: 50px; /* Altura de la imagen más pequeña */
+    }
+
+    .contenedor {
+        padding: 10px; /* Menor espaciado interno */
+        margin-top: 100px; /* Ajustar margen superior */
+    }
+
+    h2 {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #descripcion {
+        padding: 10px; /* Menor espaciado interno */
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .galeria {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 10px; /* Menor espaciado entre los elementos */
+    }
+
+    .galeria img {
+        height: auto; /* Altura automática */
+    }
+}
+/* Estilos para la información del artista */
+#informacion-artista {
+    background-color: #181717; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar y añadir margen */
+}
+
+#informacion-artista p {
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+#informacion-artista img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espaciado superior */
+}
+/* Estilos para la lista de canciones */
+#lista-canciones {
+    list-style-type: none;
+    padding: 0;
+    display: grid; /* Usar grid para la disposición */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas automáticas */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+#lista-canciones li {
+    background-color: #181717;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center; /* Centrar el texto */
+}
+
+#lista-canciones li:hover {
+    background-color: #ff4d4d;
+}
+
+#buscador-canciones {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Estilos para la lista de álbumes */
+#lista-albumes {
+    list-style-type: none;
+    padding: 0;
+    display: grid; /* Usar grid para la disposición */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas automáticas */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+#lista-albumes li {
+    background-color: #181717;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center; /* Centrar el texto */
+}
+
+#lista-albumes li:hover {
+    background-color: #ff4d4d;
+}
+
+#buscador-albumes {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}

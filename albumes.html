@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbumes de Kidd Keo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">Kidd Keo</h1>
+            <button class="btn-volver" onclick="window.history.back()">Volver</button>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <section id="albumes">
+            <h2>Álbumes de Kidd Keo</h2>
+            <input type="text" id="buscador-albumes" placeholder="Buscar álbum...">
+            <ul id="lista-albumes"></ul>
+        </section>
+    </div>
+
+    <script src="obtenerAlbumes.js"></script>
+</body>
+</html>

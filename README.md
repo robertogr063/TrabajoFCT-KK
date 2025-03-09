@@ -28,3 +28,4 @@ El proyecto consta de una página web que se conecta a la API de Deezer para obt
 >
 > Este proyecto utiliza la API de Deezer, que puede tener restricciones de **CORS (Cross-Origin Resource Sharing)**.
 
+[Representación del proyecto en vivo con vercel](https://trabajo-fct-kk.vercel.app/)

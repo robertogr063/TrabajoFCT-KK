@@ -22,4 +22,9 @@ El proyecto consta de una página web que se conecta a la API de Deezer para obt
 - **HTML**: Estructura de la página.
 - **CSS**: Estilos y diseño responsive.
 - **JavaScript**: Lógica para interactuar con la API de Deezer y manejar eventos.
-- **API de Deezer**: Para obtener datos sobre Kidd Keo.  
+- **API de Deezer**: Para obtener datos sobre Kidd Keo.
+
+> **⚠️ Nota importante sobre CORS**
+>
+> Este proyecto utiliza la API de Deezer, que puede tener restricciones de **CORS (Cross-Origin Resource Sharing)**.
+
